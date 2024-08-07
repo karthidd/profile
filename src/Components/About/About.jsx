@@ -45,6 +45,7 @@ const About = () => {
 
   return (
     <div className='about-section'>
+      <div className="wrapper">
       <h1 className='title'>About Me</h1>
       <motion.div
         className="about-container"
@@ -75,6 +76,7 @@ const About = () => {
           */}
         </div>
       </motion.div>
+      </div>
     </div>
   );
 }
