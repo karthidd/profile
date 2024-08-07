@@ -1,0 +1,212 @@
+.hero {
+  height: calc(100vh - 100px);
+  overflow: hidden;
+  background: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  .wrapper {
+    max-width: 1366px;
+    height: 100%;
+    width: 50%;
+    margin: auto;
+
+    .textContainer {
+      margin-left: 300px;
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+
+      h2 {
+        display: flex;
+        font-size: 30px;
+        color: #ffae62;
+        letter-spacing: 10px;
+      }
+
+      h1 {
+        font-size: 88px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: white;
+      }
+
+      p {
+        display: inline-block;
+        font-size: 30px;
+        font-weight: 500;
+        color: #ffae62;
+      }
+
+      .buttons {
+        display: flex;
+        flex-direction: row;
+
+        button {
+          padding: 20px;
+          border: 1px solid white;
+          border-radius: 10px;
+          background-color: transparent;
+          color: white;
+          margin-right: 20px;
+          cursor: pointer;
+          font-weight: 300;
+          font-style: bold;
+
+          &:hover {
+            background-color: #ffae62;
+            color: black;
+          }
+        }
+      }
+
+      img {
+        width: 50px;
+      }
+    }
+  }
+
+  .imageContainer {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+
+    img {
+      width: 700px;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .slidingTextContainer {
+    position: absolute;
+    font-size: 50vh;
+    bottom: -120px;
+    white-space: nowrap;
+    color: #ffffff5c;
+    width: 50%;
+    font-weight: bold;
+    z-index: 1;
+  }
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1024px) {
+  .hero .wrapper {
+    width: 70%;
+  }
+
+  .hero .wrapper .textContainer {
+    margin-left: 150px;
+    width: 60%;
+  }
+
+  .hero .imageContainer img {
+    width: 500px;
+  }
+
+  .hero .slidingTextContainer {
+    font-size: 30vh;
+    bottom: -100px;
+  }
+}
+
+@media (max-width: 844px) {
+  .hero {
+    width:900px;
+    flex-direction: column;
+    height: 750px;
+    padding: 20px;
+  }
+
+  .hero .wrapper {
+    width: 100%;
+  }
+
+  .hero .wrapper .textContainer {
+    margin-left: 0;
+    width: 100%;
+    align-items: center;
+    gap: 20px;
+
+    h2 {
+      font-size: 40px;
+    }
+
+    h1 {
+      font-size: 48px;
+    }
+
+    p {
+      font-size: 80px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      button {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .hero .imageContainer {
+    position: static;
+    width: 100%;
+    height: auto;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .hero .slidingTextContainer {
+    font-size: 20vh;
+    bottom: -60px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero .wrapper .textContainer {
+    h2 {
+      
+      font-size: 60px;
+    }
+
+    h1 {
+      font-size: 32px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+
+    .buttons button {
+      padding: 10px;
+      font-size: 14px;
+    }
+
+    img {
+      width: 40px;
+    }
+  }
+
+  .hero .slidingTextContainer {
+    font-size: 15vh;
+    bottom: -40px;
+  }
+}

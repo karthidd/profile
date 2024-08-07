@@ -1,0 +1,83 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: black;
+  color: lightgray;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+section {
+  height: 100vh;
+  scroll-snap-align: center;
+}
+
+html {
+  scroll-snap-type: y mandatory;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+    line-height: 1.5;
+    padding: 10px;
+  }
+
+  section {
+    height: 100vh;
+    scroll-snap-align: start;
+    padding: 20px;
+  }
+
+  header, footer {
+    padding: 10px;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  nav a {
+    padding: 10px 0;
+    font-size: 16px;
+  }
+
+  .button, a.button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 12px;
+  }
+
+  section {
+    padding: 10px;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+}

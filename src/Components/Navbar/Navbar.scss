@@ -1,0 +1,95 @@
+.navbar {
+  height: 100px;
+  width: 100%; // Default width for other browsers
+
+  /* Chrome specific hack */
+  @supports (-webkit-appearance: none) {
+    width: 75%; // Width for Chrome
+  }
+
+  .wrapper {
+    max-width: 1366px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+
+    span {
+      color: #ffae62;
+      font-style: italic;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .social {
+      display: flex;
+      gap: 20px;
+
+      img {
+        width: 18px;
+        height: 18px;
+      }
+    }
+
+    .navLinks {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      font-size: 25px;
+      cursor: pointer;
+    }
+  }
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1024px) {
+  .navbar {
+    width: 100%; // Adjust width to 100% at smaller screen sizes for all browsers
+  }
+
+  @supports (-webkit-appearance: none) {
+    .navbar {
+      width: 100%; // Ensure Chrome also follows the same rule
+    }
+  }
+}
+
+@media (max-width: 844px) {
+  .wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navLinks {
+    display: none;
+  }
+
+  .social {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    height: auto;
+    padding: 10px 0;
+  }
+
+  .wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  span {
+    font-size: 18px;
+  }
+
+  .navLinks {
+    display: none;
+  }
+
+  .social {
+    display: none;
+  }
+}
