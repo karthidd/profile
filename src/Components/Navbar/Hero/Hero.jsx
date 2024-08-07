@@ -69,8 +69,7 @@ const Hero = () => {
           <motion.h1 variants={childTextVariants}>Frontend Developer</motion.h1>
           {/* <motion.p>Creating beautiful web experiences!</motion.p> */}
           <motion.div className="buttons" variants={childTextVariants}>
-            <motion.button ><a href='https://drive.google.com/file/d/17Ob9xNJLjRKvY-6wrMedGKOAGwlFJSj5/view?usp=drive_link'>Resume</a></motion.button>
-            <motion.button><a href='#Contact'>Contact Me</a></motion.button>
+          <a target='_blank' href='https://drive.google.com/file/d/17Ob9xNJLjRKvY-6wrMedGKOAGwlFJSj5/view?usp=drive_link'> <motion.button >Resume</motion.button></a>            <motion.button><a href='#Contact'>Contact Me</a></motion.button>
           </motion.div>
           <motion.img variants={scrollButtonVariants} initial="initial" animate="animate" src="/scroll.png" alt="Scroll" />
         </motion.div>
